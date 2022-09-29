@@ -1,0 +1,90 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$link: #495FC7;
+$link-light: findLightColor($link);
+$link-dark: findDarkColor($link);
+$link-invert: findColorInvert($link);
+$primary: #08B2C9;
+$primary-light: findLightColor($primary);
+$primary-dark: findDarkColor($primary);
+$primary-invert: findColorInvert($primary);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: mergeColorMaps(
+    (
+        "white": (
+            $white,
+            $black,
+        ),
+        "black": (
+            $black,
+            $white,
+        ),
+        "light": (
+            $light,
+            $light-invert,
+        ),
+        "dark": (
+            $dark,
+            $dark-invert,
+        ),
+        "primary": (
+            $primary,
+            $primary-invert,
+            $primary-light,
+            $primary-dark,
+        ),
+        "link": (
+            $link,
+            $link-invert,
+            $link-light,
+            $link-dark,
+        ),
+        "info": (
+            $info,
+            $info-invert,
+            $info-light,
+            $info-dark,
+        ),
+        "success": (
+            $success,
+            $success-invert,
+            $success-light,
+            $success-dark,
+        ),
+        "warning": (
+            $warning,
+            $warning-invert,
+            $warning-light,
+            $warning-dark,
+        ),
+        "danger": (
+            $danger,
+            $danger-invert,
+            $danger-light,
+            $danger-dark,
+        ),
+    ),
+    $custom-colors
+);
+
+
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+.card{
+  box-shadow: none;
+  border:.5px solid #DBDBDB;
+}
+.card-header{
+  box-shadow:none;
+  border-bottom: .5px solid #DBDBDB;
+}
+.box{
+  box-shadow:none;
+  border-bottom: 1px solid #DBDBDB;
+}
